@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% block content %}
+    <!-- Page Header Start -->
+    <div class="page-header container-fluid bg-secondary pt-2 pt-lg-5 pb-2 mb-5">
+        <div class="container py-5">
+            <div class="row align-items-center py-4">
+                <div class="col-md-6 text-center text-md-left">
+                    <h1 class="mb-4 mb-md-0 text-white">USER FORM</h1>
+                </div>
+                <div class="row">
+                    <div class="col-12"></div>
+                    <form method="post" >
+                        {% csrf_token %}
+                        {% if tag %}
+                        <div class="alert alert-danger" role="alert">Please enter the Number</div>
+                        {% endif %}
+                        <label for="fname">Var_1:</label><br>
+                          <input type="text" name="name_1" value="{{n1}}" ></br>
+                          <input type="submit" value="Submit"><br>
+                          <label for="fname">Output:</label>
+                          <input type="text" value="{{output}}" ><br>
+
+                    </form>
+                   </div>
+            </div>
+        </div>
+    </div>
+    <!-- Page Header Start -->
+
+    {% endblock content %}
+    

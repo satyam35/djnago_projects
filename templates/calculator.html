@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% block content %}
+    <!-- Page Header Start -->
+    <div class="page-header container-fluid bg-secondary pt-2 pt-lg-5 pb-2 mb-5">
+        <div class="container py-5">
+            <div class="row align-items-center py-4">
+                <div class="col-md-6 text-center text-md-left">
+                    <h1 class="mb-4 mb-md-0 text-white">USER FORM</h1>
+                </div>
+                <div class="row">
+                    <div class="col-12"></div>
+                    <form method="post" >
+                        {% csrf_token %}
+                        <label for="fname">Var_1:</label><br>
+                          <input type="text" name="name_1" value="{{val_1}}" ></br>
+
+                          <select name="opr" id="math">
+                            <option >+</option>
+                            <option >-</option>
+                            <option >*</option>
+                            <option >/</option>
+                            <option >%</option>
+                          </select></br>
+                          <label for="lname">Var_2:</label><br>
+                          <input type="text"  name="name_2" value="{{val_2}}"></br>
+                          <input type="submit" value="Submit"><br>
+                          <label for="fname">Output:</label>
+                          <input type="text" value="{{res}}" ><br>
+
+                    </form>
+                   </div>
+            </div>
+        </div>
+    </div>
+    <!-- Page Header Start -->
+
+
+    
+
+    {% endblock content %}
+    
